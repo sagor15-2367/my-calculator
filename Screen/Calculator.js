@@ -1,12 +1,25 @@
 import React from 'react'
 import { View, Text, StyleSheet, ScrollView, Image, } from 'react-native';
 import Refesh from '../Photo/repeat.png';
+import Calculators from '../Photo/Calculatoricon.png';
+import Manu from '../Photo/manu.png';
 
 function Calculator() {
     return (
         <View style={styles.Body}>
             <View style={styles.Headers}>
-
+                <View style={styles.HeaderBody}>
+                    <Image source={Calculators} style={styles.CalculatorsIcon}></Image>
+                    <Text style={styles.Simple_Text}>Simple Calculators</Text>
+                </View>
+                <View style={styles.HeaderBody}>
+                    <Image source={Manu} style={{
+                        height: '95%',
+                        width: '15%',
+                        fontWeight: "bold"
+                    }}></Image>
+                    <Text style={{ color: 'white',fontSize:20,marginTop:'2%' }}>Manu</Text>
+                </View>
             </View>
             <View style={styles.Displays}>
                 <View style={styles.ShowsDisply}>
@@ -87,7 +100,7 @@ function Calculator() {
                 </View>
                 <View style={styles.KeybordRow}>
                     <View style={styles.KeybordColum}>
-                       <Image source={Refesh} style={{height:'70%',width:'65%'}}></Image>
+                        <Image source={Refesh} style={{ height: '70%', width: '65%' }}></Image>
                     </View>
                     <View style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>0</Text>
@@ -120,7 +133,45 @@ const styles = StyleSheet.create({
         height: '12%',
         width: '95%',
         margin: '1%',
-        backgroundColor: 'black'
+        backgroundColor: 'black',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    HeaderBody: {
+        height: '40%',
+        width: '95%',
+        marginTop: '1%',
+        backgroundColor: 'black',
+        flexDirection: 'row',
+        borderRadius: 10,
+        shadowOffset: { height: 5, width: 2 },
+        shadowColor: '#000',
+        shadowOpacity: 15,
+        shadowRadius: 10,
+        elevation: 0
+    },
+    CalculatorsIcon: {
+        height: '70%',
+        width: '10%',
+        margin: '2%',
+        padding: '3%',
+        borderRadius: 5,
+        shadowOffset: { height: 5, width: 2 },
+        shadowColor: '#000',
+        shadowOpacity: 15,
+        shadowRadius: 5,
+        elevation: 0
+    },
+    Simple_Text: {
+        fontSize: 20,
+        marginTop: '1%',
+        marginLeft: '10%',
+        color: 'white',
+        fontWeight: "bold",
+        shadowOffset: { height: 5, width: 3 },
+        shadowColor: '#000',
+        shadowOpacity: 10,
+        shadowRadius: 10
     },
     Displays: {
         height: '30%',
