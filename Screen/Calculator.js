@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, ScrollView, Image, } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, } from 'react-native';
 import Refesh from '../Photo/repeat.png';
 import Calculators from '../Photo/Calculatoricon.png';
 import Manu from '../Photo/manu.png';
@@ -13,11 +13,7 @@ function Calculator() {
                     <Text style={styles.Simple_Text}>Simple Calculators</Text>
                 </View>
                 <View style={styles.HeaderBody}>
-                    <Image source={Manu} style={{
-                        height: '95%',
-                        width: '15%',
-                        fontWeight: "bold"
-                    }}></Image>
+                    <Image source={Manu} style={styles.Manus}></Image>
                     <Text style={{ color: 'white',fontSize:20,marginTop:'2%' }}>Manu</Text>
                 </View>
             </View>
@@ -43,74 +39,74 @@ function Calculator() {
             </View>
             <View style={styles.Keybords}>
                 <View style={styles.KeybordRow}>
-                    <View style={styles.KeybordColum}>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>AC</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>%</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>( )</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>/</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.KeybordRow}>
-                    <View style={styles.KeybordColum}>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>7</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>8</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>9</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>X</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.KeybordRow}>
-                    <View style={styles.KeybordColum}>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>4</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>5</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>6</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>-</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.KeybordRow}>
-                    <View style={styles.KeybordColum}>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>1</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>2</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>3</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>+</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.KeybordRow}>
-                    <View style={styles.KeybordColum}>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Image source={Refesh} style={{ height: '70%', width: '65%' }}></Image>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>0</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>.</Text>
-                    </View>
-                    <View style={styles.KeybordColum}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.KeybordColum}>
                         <Text style={styles.KeybordText}>=</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
 
             </View>
@@ -149,6 +145,11 @@ const styles = StyleSheet.create({
         shadowOpacity: 15,
         shadowRadius: 10,
         elevation: 0
+    },
+    Manus:{
+        height: '95%',
+        width: '15%',
+        fontWeight: "bold"
     },
     CalculatorsIcon: {
         height: '70%',
