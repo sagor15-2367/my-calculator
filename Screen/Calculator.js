@@ -13,8 +13,10 @@ function Calculator() {
                     <Text style={styles.Simple_Text}>Simple Calculators</Text>
                 </View>
                 <View style={styles.HeaderBody}>
-                    <Image source={Manu} style={styles.Manus}></Image>
-                    <Text style={{ color: 'white',fontSize:20,marginTop:'2%' }}>Manu</Text>
+                    <TouchableOpacity style={{width:'20%'}}>
+                        <Image source={Manu} style={styles.Manus}></Image>
+                    </TouchableOpacity>
+                    <Text style={{ color: 'white', fontSize: 20, marginTop: '2%' }}>Manu</Text>
                 </View>
             </View>
             <View style={styles.Displays}>
@@ -146,14 +148,16 @@ const styles = StyleSheet.create({
         shadowRadius: 10,
         elevation: 0
     },
-    Manus:{
+    Manus: {
         height: '95%',
-        width: '15%',
+        width: '70%',
+        marginLeft: '2%',
+        borderRadius: 10,
         fontWeight: "bold"
     },
     CalculatorsIcon: {
         height: '70%',
-        width: '10%',
+        width: '12%',
         margin: '2%',
         padding: '3%',
         borderRadius: 5,
